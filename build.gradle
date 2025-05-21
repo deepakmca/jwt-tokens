@@ -26,12 +26,15 @@ dependencies {
 	implementation group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
 
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'mysql:mysql-connector-java'
+	//runtimeOnly 'mysql:mysql-connector-java'
+	implementation 'com.h2database:h2:2.2.224'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testImplementation 'org.mockito:mockito-core:5.5.0'
 	testImplementation 'org.mockito:mockito-junit-jupiter:5.5.0'
+	testImplementation 'net.bytebuddy:byte-buddy:1.14.6'
+	testImplementation 'net.bytebuddy:byte-buddy-agent:1.14.6'
 }
 
 tasks.named('test') {
